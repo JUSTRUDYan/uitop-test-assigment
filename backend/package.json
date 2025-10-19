@@ -1,5 +1,5 @@
 {
-  "name": "@to-do-s/backend",
+  "name": "backend",
   "version": "0.0.1",
   "private": true,
   "nx": {
@@ -76,6 +76,10 @@
         }
       }
     }
+  },
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "nest build"
   },
   "dependencies": {},
   "devDependencies": {}

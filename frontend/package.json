@@ -1,6 +1,11 @@
 {
-  "name": "@/todolist",
+  "name": "frontend",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  }
 }
