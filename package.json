@@ -2,7 +2,11 @@
   "name": "@to-do-s/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx build backend && nx build frontend",
+    "build:backend": "nx build backend",
+    "build:frontend": "nx build frontend"
+  },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^11.0.0",

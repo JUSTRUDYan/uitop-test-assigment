@@ -1,11 +1,23 @@
 {
   "version": 2,
   "builds": [
-    { "src": "frontend/next.config.js", "use": "@vercel/next" },
-    { "src": "dist/backend/main.js", "use": "@vercel/node" }
+    {
+      "src": "frontend/next.config.js",
+      "use": "@vercel/next",
+      "config": {
+        "rootDirectory": "frontend"
+      }
+    },
+    {
+      "src": "backend/dist/main.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["backend/dist/**"]
+      }
+    }
   ],
   "routes": [
-    { "src": "/api/(.*)", "dest": "dist/backend/main.js" },
+    { "src": "/api/(.*)", "dest": "backend/dist/main.js" },
     { "src": "/(.*)", "dest": "frontend/$1" }
   ]
 }
