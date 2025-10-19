@@ -1,5 +1,7 @@
 packages:
   - "apps/*"
-
+  - "backend"
+  - "backend-e2e"
+  - "frontend"
 autoInstallPeers: true
 strictPeerDependencies: false
