@@ -6,13 +6,13 @@ import TaskEntity from './entity/TaskEntity';
 import TagEntity from './entity/TagEntity';
 import {DataSource} from "typeorm";
 
-
-const AppDataSource = new DataSource({
+export const AppDataSource = new DataSource({
   type: 'sqlite',
   database: 'db.sqlite',
   entities: [TaskEntity, TagEntity],
   synchronize: true,
 });
+
 
 @Module({
   imports: [
